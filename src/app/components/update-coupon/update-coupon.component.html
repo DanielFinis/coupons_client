@@ -1,0 +1,38 @@
+<div>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="text" placeholder="{{ currentCoupon.title }}" [(ngModel)]="updatedCoupon.title" >
+    </mat-form-field>
+    <br>
+    
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="number" placeholder="{{ currentCoupon.price }}" [(ngModel)]="updatedCoupon.price">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="number" placeholder="{{ currentCoupon.availableQuantity }}" [(ngModel)]="updatedCoupon.availableQuantity">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="text" placeholder="{{ currentCoupon.category }}" [(ngModel)]="updatedCoupon.category">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="date" placeholder="{{ currentCoupon.startDate }}" [(ngModel)]="updatedCoupon.startDate">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="date" placeholder="{{ currentCoupon.endDate }}" [(ngModel)]="updatedCoupon.endDate">
+    </mat-form-field>
+    <br>
+   
+
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+        <a (click)="UpdateCoupon()">Update</a></button>
+
+</div>

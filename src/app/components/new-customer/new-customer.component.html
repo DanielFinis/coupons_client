@@ -1,0 +1,39 @@
+<div>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="text" placeholder="Full Name" [(ngModel)]="customer.fullName">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="email" placeholder="UserName (Email)" [(ngModel)]="user.username">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="password" placeholder="Password" [(ngModel)]="user.password">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="date" placeholder="Date of birth" [(ngModel)]="customer.dateOfBirth">
+    </mat-form-field>
+    <br>
+
+    <label>Are you married</label>
+    <br>
+    <mat-radio-group [(ngModel)]="customer.isMarried">
+        <mat-radio-button value="true">Yes</mat-radio-button>
+        <mat-radio-button value="false">No</mat-radio-button>
+    </mat-radio-group>
+    <br>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="number" placeholder="Number of kids" [(ngModel)]="customer.amountOfKids">
+    </mat-form-field>
+    <br>
+
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+        <a (click)="createCustomer()">Create</a></button>
+
+</div>

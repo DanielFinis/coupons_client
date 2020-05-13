@@ -1,0 +1,11 @@
+div{
+    font-size: xx-large;
+    font-weight: bold;
+}
+button{
+    margin-right: -1000px;
+    margin-top: -100px;
+    background-color: lightcoral;
+    font-weight: bold;
+    color: black;
+}

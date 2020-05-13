@@ -1,0 +1,35 @@
+<div>
+    <form>
+
+        <!-- User name : <input type="text" name="username" [(ngModel)]="userLoginDetails.username"><br> -->
+
+        <mat-form-field appearnce="outline">
+            <input matInput type="email" placeholder="UserName (Email)" name="username"
+                [(ngModel)]="userLoginDetails.username">
+        </mat-form-field>
+        <br>
+        
+        <!-- Password : <input type="password" name="password" [(ngModel)]="userLoginDetails.password"> <br> -->
+
+        <mat-form-field appearnce="outline">
+            <input matInput type="password" placeholder="Password" name="password"
+                [(ngModel)]="userLoginDetails.password">
+        </mat-form-field>
+        <br>
+
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="login()">Login</button>
+        <br>
+
+        <!-- <input type="button" (click)="login()" value="Login" /> -->
+
+        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">
+            <a (click)="createCustomer()">Create</a></button> -->
+
+
+        <a routerLink="/new-customer">Register</a>
+
+    </form>
+
+
+
+</div>

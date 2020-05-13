@@ -1,0 +1,102 @@
+Maximal price: <input type="text" [(ngModel)]="maxPrice">
+
+<button type="button" class="btn btn-default" data-dismiss="modal">
+  <a routerLink="/customer-details/">My Account</a></button>
+
+  <button type="button" class="btn btn-default" data-dismiss="modal">
+    <a routerLink="/customer-purchases/">My Purchases</a></button>
+
+<div>
+<table class="table table-old" *ngIf="displayedCoupon==null">
+
+  <thead class="bg-primary white-text">
+
+    <!-- A table row -->
+
+    <tr>
+
+      <!-- A table header -->
+
+      <th scope="col">Name</th>
+
+      <th scope="col" >Price</th>
+
+      <th scope="col">Amount</th>
+
+     
+
+
+
+    </tr>
+
+  </thead>
+
+
+
+  <tbody class="bg-success text-dark">
+
+    <tr *ngFor="let currentCoupon of coupons|minPricePipe :maxPrice" (click)="onCouponClicked(currentCoupon)" data-toggle="modal"
+      data-target="#myModal">
+
+      <td>{{ currentCoupon.title }}</td>
+
+      <td>{{ currentCoupon.price }}</td>
+
+      <td>{{ currentCoupon.availableQuantity }}</td>
+
+      
+
+      <!-- <td></td> -->
+
+    </tr>
+
+  </tbody>
+
+</table>
+</div>
+<div>
+<div class="container" *ngIf="displayedCoupon!=null">
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <p class="modal-title">{{ displayedCoupon.title }}</p>
+        </div>
+        <div class="modal-body">
+          <p>Price : {{ displayedCoupon.price }}<br>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <div style="text-align: left;">
+            <h2>About the product : </h2 ><br>
+            <p>
+              availableQuantity : {{ displayedCoupon.availableQuantity }}<br>
+              start Date : {{ displayedCoupon.startDate }}<br>
+              end Date : {{ displayedCoupon.endDate }}<br>
+              <!-- Pay attention that we've registered in the html, a "purchase()" callback function to the onClick event.
+              The function doesn't exist (a thing which we can see in the Chrome console, as an error message after
+              clicking the button), but when after we start wokring with Javascript, it could be implemented. -->
+            </p>
+          </div>
+          <!-- <button type="button" (click)=[(purchaseCoupon())] class="btn btn-default"
+            data-dismiss="modal">Purchase</button> -->
+            
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            <a routerLink="/add-purchase/{{displayedCoupon.id}}">Purchase</a></button>
+
+          <button type="button" class="btn btn-default" data-dismiss="modal"
+            (click)=[(onCloseCouponWindow())]>Cancel</button>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</div>

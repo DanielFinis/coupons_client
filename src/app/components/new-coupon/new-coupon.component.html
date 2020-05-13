@@ -1,0 +1,37 @@
+<div>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="text" placeholder="Title" [(ngModel)]="coupon.title">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="number" placeholder="Price" [(ngModel)]="coupon.price">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="number" placeholder="AvailableQuantity" [(ngModel)]="coupon.availableQuantity">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="text" placeholder="Category" [(ngModel)]="coupon.category">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="date" placeholder="Start date" [(ngModel)]="coupon.startDate">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearnce="outline">
+        <input matInput type="date" placeholder="End date" [(ngModel)]="coupon.endDate">
+    </mat-form-field>
+    <br>
+   
+
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+        <a (click)="createCoupon()">Create</a></button>
+
+</div>

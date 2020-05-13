@@ -1,0 +1,26 @@
+
+   <form>
+    
+        <input type="number"  placeholder="Amount of items" [(ngModel)]="purchase.amountOfItems" name="amountOfItems">
+        <br>
+        <br>
+        <p>The product that you are ordering is:<br>
+             {{couponDetails.title}}
+        </p><br>
+        <p>The price is:<br>
+            {{couponDetails.price}} NIS
+        </p><br>
+        <p>The availableQuantity is:<br>
+            {{couponDetails.availableQuantity}} 
+        </p><br>
+
+        <button type="button" (click)="createPurchase()" class="btn btn-default" data-dismiss="modal">buy</button>
+    
+    
+    </form>
+    
+
+
+
+
+
