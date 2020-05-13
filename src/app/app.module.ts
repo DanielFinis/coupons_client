@@ -12,7 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { AuthenticationInterceptor } from './interceptors/AuthenticationInterceptor';
-import { CouponsPipeByMinPrice } from './pipes/CouponsPipeByMinPrice';
+// import { CouponsPipeByMinPrice } from './pipes/CouponsPipeByMinPrice';
 import { AddPurchaseComponent } from './components/add-purchase/add-purchase.component';
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 import { CustomerPurchasesComponent } from './components/customer-purchases/customer-purchases.component';
