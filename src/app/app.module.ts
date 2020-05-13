@@ -36,7 +36,7 @@ import { UpdateCouponComponent } from './components/update-coupon/update-coupon.
     FooterComponent,
     LoginComponent,
     CustomerComponent,
-    CouponsPipeByMinPrice,
+    // CouponsPipeByMinPrice,
     AddPurchaseComponent,
     CustomerDetailsComponent,
     CustomerPurchasesComponent,
