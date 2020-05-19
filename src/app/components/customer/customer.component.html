@@ -35,7 +35,7 @@
 
   <tbody class="bg-success text-dark">
 
-    <tr *ngFor="let currentCoupon of coupons|minPricePipe :maxPrice" (click)="onCouponClicked(currentCoupon)" data-toggle="modal"
+    <tr *ngFor="let currentCoupon of coupons" (click)="onCouponClicked(currentCoupon)" data-toggle="modal"
       data-target="#myModal">
 
       <td>{{ currentCoupon.title }}</td>
