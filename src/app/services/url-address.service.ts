@@ -9,7 +9,7 @@ export class UrlAddressService {
 
   constructor(private http:HttpClient) { }
 
-  public ec2address = "http://18.223.160.229:4200";
+  public ec2address = "http://18.223.160.229:8080";
 
-  
+
 }
